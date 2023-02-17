@@ -17,60 +17,64 @@
 
   <body>
     <h4 class="title">SPLI <br />TTER</h4>
-    <div class="card">
-      <div class="left-side">
-        <div class="card-bill">
-          <div class="card-bill-info">
-            <h2 class="desc">Bill</h2>
-            <span class="error"></span>
+    <form>
+      <div class="card">
+        <div class="left-side">
+          <div class="card-bill">
+            <div class="card-bill-info">
+              <h2 class="desc">Bill</h2>
+              <span class="error" data-type="bills"></span>
+            </div>
+            <div class="price group">
+              <input type="text" placeholder="0" id="price" class="price" data-info="bills" autofocus/>
+              <img src="images/icon-dollar.svg" />
+            </div>
           </div>
-          <div class="price group">
-            <input type="text" placeholder="0" class="price" />
-            <img src="images/icon-dollar.svg" />
+          <div class="card-tip">
+            <h2 class="desc">Select Tip %</h2>
+            <div class="percentage">
+              <button class="percent" data-percent="0.05">5%</button>
+              <button class="percent" data-percent="0.1">10%</button>
+              <button class="percent" data-percent="0.15">15%</button>
+              <button class="percent" data-percent="0.25">25%</button>
+              <button class="percent" data-percent="0.5">50%</button>
+              <input
+                type="text"
+                class="custom percent"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="card-pepople">
+            <div class="card-bill-info">
+              <h2 class="desc">Number of People</h2>
+              <span class="error" data-type="membre"></span>
+            </div>
+            <div class="price group">
+              <input type="text" placeholder="0" id ='price' class="price" data-info="membre" />
+              <img src="images/icon-person.svg" />
+            </div>
           </div>
         </div>
-        <div class="card-tip">
-          <h2 class="desc">Select Tip %</h2>
-          <div class="percentage">
-            <button class="percent">5%</button>
-            <button class="percent">10%</button>
-            <button class="percent">15%</button>
-            <button class="percent">25%</button>
-            <button class="percent">50%</button>
-            <input
-              type="text"
-              class="custom percent"
-              value="0"
-              placeholder="Custom"
-            />
+        <div class="right-side">
+          <div class="results">
+            <div class="result amount">
+              <h2>
+                Tip Amount<br/><span id="person">/ person</span>
+              </h2>
+              <span class="resultAmount">$0.00</span>
+            </div>
+            <div class="result total">
+              <h2>Total<br/><span id="person">/ person</span></h2>
+              <span class="resultTotal">$0.00</span>
+            </div>
           </div>
-        </div>
-        <div class="card-pepople">
-          <h2 class="desc">Number of People</h2>
-          <div class="price group">
-            <input type="text" placeholder="0" id ='price' class="price" />
-            <img src="images/icon-person.svg" />
+          <div class="reset">
+            <button type="submit">reset</button>
           </div>
         </div>
       </div>
-      <div class="right-side">
-        <div class="results">
-          <div class="result amount">
-            <h2>
-              Tip Amount<br/><span id="person">/ person</span>
-            </h2>
-            <span>$0.00</span>
-          </div>
-          <div class="result total">
-            <h2>Total<br/><span id="person">/ person</span></h2>
-            <span>$0.00</span>
-          </div>
-        </div>
-        <div class="reset">
-          <button>reset</button>
-        </div>
-      </div>
-    </div>
+    </form>
     <script src="assets/index.js"></script>
   </body>
 </html>
